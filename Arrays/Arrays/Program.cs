@@ -3,12 +3,15 @@ using System;
 
 namespace Arrays
 {
+    // Write a program, which compares two arrays of type char
+    // lexicographically (character by character) and checks, which one is first
+    // in the lexicographical order.
     class Program
     {
         static void Main(string[] args)
         {
-            int[] arrayOne;
-            int[] arrayTwo;
+            char[] arrayOne;
+            char[] arrayTwo;
             int length;
             bool areEqual;
 
@@ -20,19 +23,19 @@ namespace Arrays
             length = int.Parse(Console.ReadLine());
             arrayTwo = ArrayMaker(length);
 
-            areEqual = ArrayCompare.CompareArray(arrayOne, arrayTwo);
-            Console.WriteLine($"Array Equivalency = {areEqual}");
+            //areEqual = ArrayCompare.CompareArrayInt(arrayOne, arrayTwo);
+            //Console.WriteLine($"Array Equivalency = {areEqual}");
         }
 
-        public static int[] ArrayMaker(int arrayLength)
+        public static char[] ArrayMaker(int arrayLength)
         {
-            int[] array = new int[arrayLength];
-            int value;
+            char[] array = new char[arrayLength];
+            char value;
 
             for (int i = 0; i < arrayLength; i++)
             {
                 Console.Write($"Enter the number for index {i}: ");
-                value = int.Parse(Console.ReadLine());
+                value = char.Parse(Console.ReadLine());
                 array[i] = value;
             }
 
