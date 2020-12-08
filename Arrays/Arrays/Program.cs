@@ -1,4 +1,5 @@
-﻿using ExerciseTwo;
+﻿using ExerciseThree;
+using ExerciseTwo;
 using System;
 
 namespace Arrays
@@ -13,18 +14,15 @@ namespace Arrays
             char[] arrayOne;
             char[] arrayTwo;
             int length;
-            bool areEqual;
 
             Console.Write("Enter first array length: ");
             length = int.Parse(Console.ReadLine());
             arrayOne = ArrayMaker(length);
 
-            Console.Write("Enter second array length: ");
-            length = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Second array length is: {length}");
             arrayTwo = ArrayMaker(length);
 
-            //areEqual = ArrayCompare.CompareArrayInt(arrayOne, arrayTwo);
-            //Console.WriteLine($"Array Equivalency = {areEqual}");
+            CharCompare.Compare(arrayOne, arrayTwo);
         }
 
         public static char[] ArrayMaker(int arrayLength)
@@ -34,7 +32,7 @@ namespace Arrays
 
             for (int i = 0; i < arrayLength; i++)
             {
-                Console.Write($"Enter the number for index {i}: ");
+                Console.Write($"Enter the character for index {i}: ");
                 value = char.Parse(Console.ReadLine());
                 array[i] = value;
             }
