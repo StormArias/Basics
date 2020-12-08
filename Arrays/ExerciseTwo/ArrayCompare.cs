@@ -7,7 +7,7 @@ namespace ExerciseTwo
     // length and all of their elements, which have the same index, are equal).
     public class ArrayCompare
     {
-        public static bool CompareArray(int[] arrayOne, int[] arrayTwo)
+        public static bool CompareArrayInt(int[] arrayOne, int[] arrayTwo)
         {
             bool isEqualLength;
             bool? hasEqualIndexValues = null;
